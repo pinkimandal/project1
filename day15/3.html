@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="form">
+      <input type="number" id="num" placeholder="Type a number..." />
+      <button>Add</button>
+    </form>
+    <div>
+      <ul id="listItems"></ul>
+    </div>
+    <div>
+      <button id="button" onclick="sum();">Total</button>
+    </div>
+
+    <script>
+      form = document.querySelector("#form");
+      itemList = document.querySelector("#listItems");
+
+      form.addEventListener("submit", addItems);
+
+      function addItems(e) {
+        e.preventDefault();
+        var input = document.querySelector("#num").value;
+        li = document.createElement("li");
+        console.log(li);
+        li.appendChild(document.createTextNode(input));
+        itemList.appendChild(li);
+      }
+
+      function sum() {
+        let list = document.querySelector("ul").children;
+        let total = 0;
+        for (let i = 0; i < list.length; i++) {
+          let item = list[i];
+          total += parseInt(item.innerText);
+        }
+        document.querySelector("#button").innerHTML = total;
+      }
+    </script>
+  </body>
+</html>

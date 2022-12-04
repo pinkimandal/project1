@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="form">
+      <input id="input" type="text" placeholder="Add element..." />
+      <button>Add</button>
+    </form>
+    <div id="div">
+      <ul id="itemList">
+        <li>
+          first
+          <button>Delete</button>
+        </li>
+        <li>
+          second
+          <button>Delete</button>
+        </li>
+        <li>
+          third
+          <button>Delete</button>
+        </li>
+        <li>
+          fourth
+          <button>Delete</button>
+        </li>
+      </ul>
+    </div>
+    <script>
+      form = document.querySelector("#form");
+      itemList = document.querySelector("#itemList");
+      form.addEventListener("submit", addItem);
+      function addItem(e) {
+        e.preventDefault();
+        var newItem = document.querySelector("#input").value;
+        li = document.createElement("li");
+        li.appendChild(document.createTextNode(newItem));
+        deleteBtn = document.createElement("button");
+        deleteBtn.appendChild(document.createTextNode("Delete"));
+        li.appendChild(deleteBtn);
+        itemList.appendChild(li);
+      }
+      // To delte items
+      itemList.addEventListener("click", removeItem);
+      function removeItem(e) {
+        var li = e.target.parentElement;
+        itemList.removeChild(li);
+      }
+    </script>
+  </body>
+</html>

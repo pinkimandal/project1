@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="name">Mango</h1>
+    <div>
+      <button onclick="vowelCheckA();">a</button>
+      <button onclick="vowelCheckE();">e</button>
+      <button onclick="vowelCheckI();">i</button>
+      <button onclick="vowelCheckO();">o</button>
+      <button onclick="vowelCheckU();">u</button>
+    </div>
+    <script>
+      name = document.querySelector("#name").innerHTML;
+
+      // To check A
+      function commonVowel(p1) {
+        console.log(name);
+        for (var i = 0; i < name.length; i++) {
+          if (name[i] == p1) name = name.replace(name[i], "&#128508");
+        }
+        document.querySelector("#name").innerHTML = name;
+      }
+
+      function vowelCheckA() {
+        console.log(name);
+        for (var i = 0; i < name.length; i++) {
+          if (name[i] == "a") name = name.replace(name[i], "&#128508");
+        }
+        document.querySelector("#name").innerHTML = name;
+      }
+
+      // To check E
+      function vowelCheckE() {
+        console.log(name);
+        for (var i = 0; i < name.length; i++) {
+          if (name[i] == "e") name = name.replace(name[i], "&#");
+        }
+        document.querySelector("#name").innerHTML = name;
+      }
+
+      // To check I
+      function vowelCheckI() {
+        for (var i = 0; i < name.length; i++) {
+          if (name[i] == "i") name = name.replace(name[i], "&#128513");
+        }
+        document.querySelector("#name").innerHTML = name;
+      }
+
+      function vowelCheckO() {
+        for (var i = 0; i < name.length; i++) {
+          if (name[i] == "o") name = name.replace(name[i], "&#128514");
+        }
+        document.querySelector("#name").innerHTML = name;
+      }
+
+      function vowelCheckU() {
+        for (var i = 0; i < name.length; i++) {
+          if (name[i] == "u") name = name.replace(name[i], "&#128507");
+        }
+        document.querySelector("#name").innerHTML = name;
+      }
+    </script>
+  </body>
+</html>

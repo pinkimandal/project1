@@ -1,0 +1,35 @@
+body {
+    background-color: rgb(226, 222, 236);
+}
+
+
+h1 {
+    border: 3px solid black;
+    text-align: center;
+    background-color: rgb(189, 127, 189);
+    height: 60px;
+    width: 45%;
+    text-decoration-line: underline;
+    margin: auto;
+    padding: 10px 2px;
+
+}
+
+
+.a-h3 {
+    font-size: 40px;
+    text-decoration-line: underline;
+}
+
+.img {
+
+    float: right;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+
+}
+
+.div {
+    overflow: auto;
+}

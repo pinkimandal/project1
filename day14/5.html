@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="name">Mango</h1>
+
+    <div>
+      <button onclick="upperCase();">UpperCase</button>
+      <button onclick="lowerCase();">LowerCase</button>
+      <button onclick="checkVowel();">Replace vowel with *</button>
+    </div>
+    <div>
+      <button onclick="vowelCheck();">a</button>
+      <button onclick="vowelCheck();">e</button>
+      <button onclick="vowelCheck();">i</button>
+      <button onclick="vowelCheck();">o</button>
+      <button onclick="vowelCheck();">u</button>
+    </div>
+    <script>
+      function upperCase() {
+        var name = document.querySelector("#name").innerHTML;
+
+        document.querySelector("#name").innerHTML = name.toUpperCase();
+      }
+
+      function lowerCase() {
+        var name = document.querySelector("#name").innerHTML;
+
+        document.querySelector("#name").innerHTML = name.toLowerCase();
+      }
+      // Replace vowel with *
+      function checkVowel() {
+        var name = document.querySelector("#name").innerHTML;
+        for (var i = 0; i < name.length; i++) {
+          if (
+            name[i] == "a" ||
+            name[i] == "e" ||
+            name[i] == "i" ||
+            name[i] == "o" ||
+            name[i] == "u"
+          )
+            name = name.replace(name[i], "*");
+          document.querySelector("#name").innerHTML = name;
+        }
+      }
+      // Replace vowel with emoji
+      function vowelCheck() {
+        var name = document.querySelector("#name").innerHTML;
+
+        for (var i = 0; i < name.length; i++) {
+          if (name[i] == "a") {
+            name = name.replace(name[i], "&");
+          } else if (name[i] == "e") {
+            name = name.replace(name[i], "&#128508");
+          } else if (name[i] == "i") {
+            name = name.replace(name[i], "&#128513");
+          } else if (name[i] == "o") {
+            name = name.replace(name[i], "&#128514");
+          } else if (name[i] == "u") {
+            name = name.replace(name[i], "&#128507");
+          }
+        }
+        document.querySelector("#name").innerHTML = name;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+.bg-class {
+    background-color: gold;
+}
+
+.input-class {
+    width: 100%;
+    height: 60px;
+    font-size: xx-large;
+    color: green;
+    border: 1px solid green;
+    font-style: italic;
+    border-radius: 16px;
+}

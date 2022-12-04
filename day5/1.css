@@ -1,0 +1,12 @@
+.a {
+    display: inline-block;
+    width: 168px;
+    height: 152px;
+    padding: 5px;
+    overflow: auto;
+
+}
+
+img {
+    border-radius: 32%;
+}

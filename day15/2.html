@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="name">Mango</h1>
+    <div>
+      <button onclick="commonVowel('a');">a</button>
+      <button onclick="commonVowel('e');">e</button>
+      <button onclick="commonVowel('i');">i</button>
+      <button onclick="commonVowel('o');">o</button>
+      <button onclick="commonVowel('u');">u</button>
+    </div>
+    <script>
+      name = document.querySelector("#name").innerHTML;
+
+      function commonVowel(p1) {
+        for (var i = 0; i < name.length; i++) {
+          if (name[i] == p1) name = name.replace(name[i], "&#128508");
+        }
+        document.querySelector("#name").innerHTML = name;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <button id="num1">5</button>
+      <button id="num2">10</button>
+    </div>
+    <div>
+      <button onclick=" sum();" id="sum">Sum</button>
+      <button onclick=" diff();" id="diff">Difference</button>
+      <button id="multi" onclick="multi();">Multiplication</button>
+      <button id="div" onclick="div();">Division</button>
+    </div>
+    <script>
+      function sum() {
+        var sum = 0;
+        var num1 = parseInt(document.querySelector("#num1").innerHTML);
+        var num2 = parseInt(document.querySelector("#num2").innerHTML);
+
+        sum = num1 + num2;
+        console.log(sum);
+        document.querySelector("#sum").innerHTML = sum;
+      }
+      function diff() {
+        var diff = 0;
+        var num1 = parseInt(document.querySelector("#num1").innerHTML);
+        var num2 = parseInt(document.querySelector("#num2").innerHTML);
+
+        diff = num1 - num2;
+        document.querySelector("#diff").innerHTML = diff;
+      }
+      function multi() {
+        var m = 0;
+        var num1 = parseInt(document.querySelector("#num1").innerHTML);
+        var num2 = parseInt(document.querySelector("#num2").innerHTML);
+
+        m = num1 * num2;
+        document.querySelector("#multi").innerHTML = m;
+      }
+      function div() {
+        var d = 0;
+        var num1 = parseInt(document.querySelector("#num1").innerHTML);
+        var num2 = parseInt(document.querySelector("#num2").innerHTML);
+
+        d = num1 / num2;
+        document.querySelector("#div").innerHTML = d;
+      }
+    </script>
+  </body>
+</html>

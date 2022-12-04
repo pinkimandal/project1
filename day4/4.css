@@ -1,0 +1,19 @@
+.n-class {
+    color: green;
+    font-size: 42px;
+    background-color: aqua;
+    text-align: center;
+}
+
+.n {
+    color: green;
+    text-align: center;
+    border: 2px solid goldenrod;
+}
+
+.input {
+    width: 90px;
+    height: 22px;
+    border: 4px solid goldenrod;
+
+}

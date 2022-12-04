@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <script>
+      function like() {
+        let oldcounter = document.querySelector("#c").innerHTML;
+
+        oldcounter = parseInt(oldcounter);
+
+        document.querySelector("#c").innerHTML = oldcounter + 1;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Like and Subscribe</h1>
+    <div id="c">100</div>
+    <button onclick="like();">&#128077;</button>
+
+    <div class="m-3 input-group">
+      <button class="btn btn-outline-secondary">Click me &#128077;</button>
+      <input
+        type="color"
+        class="form-control form-control-color"
+        value="#563d7c"
+      />
+    </div>
+  </body>
+</html>

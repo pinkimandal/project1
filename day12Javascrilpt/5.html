@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+
+    <script>
+      let counter = 0;
+      function sendMessage() {
+        let parent = document.querySelector("#parent");
+
+        let message = document.querySelector("input").value;
+
+        let newMessage = "";
+
+        document.querySelector("input").value = "";
+        if (counter % 2 == 0) {
+          newMessage =
+            "<div class='d-flex justify-content-start alert alert-light fs-3 rounded-0 border-0 border-5 border-start border-success'>" +
+            message +
+            " </div>";
+        } else {
+          newMessage =
+            "<div class='d-flex justify-content-end alert alert-light fs-3 rounded-0 border-0 border-5 border-end border-success'>" +
+            message +
+            " </div>";
+        }
+
+        parent.innerHTML += newMessage;
+
+        counter++;
+      }
+    </script>
+  </head>
+
+  <body>
+    <div class="bg-success text-light mb-2 fs-3 p-2">Whatsapp</div>
+    <div class="d-flex flex-column" style="height: 90vh">
+      <div class="bg-success text-light mb-2 fs-3 p-2" style="width: 100%">
+        Whatsapp
+      </div>
+      <div id="parent" class="mx-1"></div>
+    </div>
+    <div class="d-flex align-items-end">
+      <div style="width: 80%">
+        <input type="text" placeholder="Type here.." class="form-control" />
+      </div>
+      <div class="d-flex">
+        <input
+          class="btn btn-success rounded-2"
+          type="button"
+          value="Send Message"
+          onclick="sendMessage()"
+        />
+      </div>
+    </div>
+  </body>
+</html>

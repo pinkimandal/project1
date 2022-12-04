@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let counter = 0;
+      window.addEventListener("load", () => {
+        let num = localStorage.getItem("list");
+        num = JSON.parse(num);
+
+        for (let x of num) {
+          let container = document.querySelector("#container");
+          let newElement = `<p> ${x} <button onclick='del(this, ${counter})'>Delete</button></p>`;
+          container.innerHTML = container.innerHTML + newElement;
+        }
+      });
+
+      function add() {
+        let input = document.querySelector("input").value;
+        let container = document.querySelector("#container");
+        counter += 1;
+        let newElement = `<p> ${input} <button onclick='del(this, ${counter})'>Delete</button></p>`;
+        container.innerHTML = container.innerHTML + newElement;
+
+        let str = localStorage.getItem("list");
+        let item = JSON.parse(str);
+        if (item == null) {
+          item = [];
+        }
+        item.push(input);
+        localStorage.setItem("list", JSON.stringify(item));
+      }
+
+      function del(p1, index) {
+        p1.parentElement.remove();
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <input type="text" placeholder="Type something...." />
+      <input type="button" value="Add" onclick="add()" />
+    </div>
+    <div id="container">
+      <p>Product1 <button onclick="del(this, 0)">Delete</button></p>
+    </div>
+  </body>
+</html>
