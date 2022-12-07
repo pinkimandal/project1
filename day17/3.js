@@ -6,3 +6,4 @@ const list = [];
 
 console.log(i);
 console.log(price);
+console.log("Hello World");
