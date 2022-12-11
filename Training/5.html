@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="text-id1" onkeyup="checkEnter(event)" />
+
+    <input
+      type="button"
+      id="btn-id1"
+      value="Add New Message"
+      onclick="addNewMessage(this)"
+    />
+
+    <!-- This is message Container-->
+    <div
+      style="display: flex; justify-content: space-between; align-items: center"
+    >
+      <h1>User Message</h1>
+      <input type="button" value="DEL" onclick="deleteMessage(this)" />
+    </div>
+  </body>
+</html>
